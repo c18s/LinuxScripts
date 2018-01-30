@@ -12,7 +12,7 @@ Collection of Linux scripts
 
 ## Successful scripts
 
-- [x] swapfile
+- [x] [swapfile](swapfile)
 
 ## Todo
 
