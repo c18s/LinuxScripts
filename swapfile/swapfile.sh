@@ -31,6 +31,11 @@ if [ "$(id -u)" -ne 0 ]; then
   exit 1
 fi
 
+if [ ! -e /proc/meminfo ]; then
+  echo "This operating system is not supported"
+  exit 1
+fi
+
 SWAP_EXISTS=$(swapExists)
 if [ ! -z "$SWAP_EXISTS" ]; then
   echo "Swap already exists"
