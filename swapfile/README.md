@@ -15,20 +15,20 @@
 Default swap size is 4G
 
 ```bash
-curl https://github.com/c18s/LinuxScripts/blob/master/swapfile/create_swap.sh | sh
+curl https://raw.githubusercontent.com/c18s/LinuxScripts/master/swapfile/create_swap.sh | sh
 ```
 
 Customize swap size (example: 2G)
 
 ```bash
-curl https://github.com/c18s/LinuxScripts/blob/master/swapfile/create_swap.sh > create_swap.sh
+curl https://raw.githubusercontent.com/c18s/LinuxScripts/master/swapfile/create_swap.sh > create_swap.sh
 sh ./create_swap.sh 2
 ```
 
 ### Remove
 
 ```bash
-curl https://github.com/c18s/LinuxScripts/blob/master/swapfile/remove_swap.sh | sh
+curl https://raw.githubusercontent.com/c18s/LinuxScripts/master/swapfile/remove_swap.sh | sh
 ```
 
 ## Reference
