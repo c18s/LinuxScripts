@@ -5,7 +5,7 @@ trim() {
 }
 
 parseInt() {
-  echo $1 | awk '{print int($1)}'
+  echo "$1" | awk '{print int($1)}'
 }
 
 rootSizeAvailable() {
@@ -27,18 +27,18 @@ swapExists() {
 }
 
 if [ "$(id -u)" -ne 0 ]; then
-  echo "This script must be run as root"
+  echo 'This script must be run as root'
   exit 1
 fi
 
 if [ ! -e /proc/meminfo ]; then
-  echo "This operating system is not supported"
+  echo 'This operating system is not supported'
   exit 1
 fi
 
 SWAP_EXISTS=$(swapExists)
 if [ ! -z "$SWAP_EXISTS" ]; then
-  echo "Swap already exists"
+  echo 'Swap already exists'
   echo "$SWAP_EXISTS"
   exit 0
 fi
@@ -52,14 +52,14 @@ fi
 
 ROOT_SIZE=$(rootSizeAvailable)
 if [ $ROOT_SIZE -le $SIZE ]; then
-  echo "No space left on device: /"
+  echo 'No space left on device: /'
   echo "Swap size require: ${SIZE}G"
   echo "Root size abailable: ${ROOT_SIZE}G"
   exit 1
 fi
 
-echo "Enabling the swap file..."
-echo "3" >/proc/sys/vm/drop_caches 2>/dev/null
+echo 'Enabling the swap file...'
+echo '3' >/proc/sys/vm/drop_caches 2>/dev/null
 swapoff -a
 SWAP_FILE=/swapfile
 rm -rf $SWAP_FILE
