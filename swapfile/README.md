@@ -31,6 +31,17 @@ sh ./create_swap.sh 2
 curl https://raw.githubusercontent.com/c18s/LinuxScripts/master/swapfile/remove_swap.sh | sh
 ```
 
+### Tuning virtual memory
+
+> vm.swappiness=5
+vm.vfs_cache_pressure=50
+vm.dirty_ratio=10
+vm.dirty_background_ratio=5
+
+```bash
+curl https://raw.githubusercontent.com/c18s/LinuxScripts/master/swapfile/sysctl_swap.sh | sh
+```
+
 ## Reference
 
 - :octocat: <https://github.com/c18s/LinuxScripts/tree/master/swapfile>
