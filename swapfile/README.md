@@ -21,8 +21,7 @@ curl https://raw.githubusercontent.com/c18s/LinuxScripts/master/swapfile/create_
 Customize swap size (example: 2G)
 
 ```bash
-curl https://raw.githubusercontent.com/c18s/LinuxScripts/master/swapfile/create_swap.sh > create_swap.sh
-sh ./create_swap.sh 2
+curl https://raw.githubusercontent.com/c18s/LinuxScripts/master/swapfile/create_swap.sh | SIZE=2 create_swap.sh
 ```
 
 ### Remove
