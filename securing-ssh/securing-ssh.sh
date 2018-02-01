@@ -19,6 +19,12 @@ if [ ! -e $AUTHORIZED_KEYS_FILE ]; then
 fi
 chmod 644 $AUTHORIZED_KEYS_FILE
 
+if [ "$RESET" = 'yes' ]; then
+  echo "Restore from backup"
+  cp $SSHD_CONFIG_BACKUP_FILE $SSHD_CONFIG_FILE && echo "Done"
+  exit 0
+fi
+
 if [ ! -e $SSHD_CONFIG_BACKUP_FILE ]; then
   cp $SSHD_CONFIG_FILE $SSHD_CONFIG_BACKUP_FILE
 fi
