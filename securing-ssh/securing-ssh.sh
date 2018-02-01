@@ -32,7 +32,7 @@ fi
 updateConfig() {
   SSHD_CONFIG=$(sed "$2" $SSHD_CONFIG_FILE)
   [ $? -ne 0 ] && return
-  echo "$SSHD_CONFIG" | awk '!a[$0]++' >$SSHD_CONFIG_FILE
+  echo "$SSHD_CONFIG" | awk '!NF || !x[$0]++' | sed '/./,/^$/!d' >$SSHD_CONFIG_FILE
   grep "$1" $SSHD_CONFIG_FILE
 }
 
