@@ -1,6 +1,6 @@
 # Automatically Create/Remove And Mount Swap File
 
-![Swap file](https://raw.githubusercontent.com/c18s/LinuxScripts/master/swapfile/logo.png "Swap Logo")
+![Swap file](logo.png "Swap Logo")
 
 ----
 
