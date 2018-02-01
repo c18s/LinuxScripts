@@ -16,7 +16,7 @@ fi
 
 if [ ! -e $AUTHORIZED_KEYS_FILE ]; then
   touch $AUTHORIZED_KEYS_FILE
-  chmod 600 $AUTHORIZED_KEYS_FILE
+  chmod 644 $AUTHORIZED_KEYS_FILE
 fi
 
 if [ ! -e $SSHD_CONFIG_BACKUP_FILE ]; then
