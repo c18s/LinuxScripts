@@ -13,10 +13,11 @@ Collection of Linux scripts
 ## Successful scripts
 
 - [x] [swapfile](swapfile)
+- [x] [securing-ssh](securing-ssh)
 
 ## Todo
 
-- [ ] securing-ssh
+- [ ]
 
 ## License
 
