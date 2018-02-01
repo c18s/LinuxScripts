@@ -1,6 +1,6 @@
 # LinuxScripts
 
-![Linux scripts](https://raw.githubusercontent.com/c18s/LinuxScripts/master/logo.png "Script Logo")
+![Linux scripts](logo.png "Script Logo")
 
 Collection of Linux scripts
 
