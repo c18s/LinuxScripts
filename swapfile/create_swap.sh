@@ -43,10 +43,10 @@ if [ ! -z "$SWAP_EXISTS" ]; then
   exit 0
 fi
 
-SIZE=$(parseInt ${1:-4})
+SIZE=$(parseInt ${SIZE:-4})
 if [ $SIZE -lt 1 ]; then
-  echo "Usage: $0 [size]"
-  echo "Example(Swap size: 4G): $0 4"
+  echo "Usage: SIZE=[size] $0"
+  echo "Example(Swap size: 4G): SIZE=4 $0"
   exit 1
 fi
 
