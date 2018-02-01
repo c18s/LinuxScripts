@@ -56,6 +56,6 @@ curl https://raw.githubusercontent.com/c18s/LinuxScripts/master/securing-ssh/sec
 
 ## Reference
 
-- :octocat: <https://github.com/c18s/LinuxScripts/tree/master/swapfile>
+- :octocat: <https://github.com/c18s/LinuxScripts/tree/master/securing-ssh>
 
 [1]: https://wiki.centos.org/HowTos/Network/SecuringSSH
