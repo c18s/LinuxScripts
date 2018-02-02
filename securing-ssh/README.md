@@ -45,7 +45,7 @@ curl https://raw.githubusercontent.com/c18s/LinuxScripts/master/securing-ssh/sec
 Optional
 
 ```bash
-curl https://raw.githubusercontent.com/c18s/LinuxScripts/master/securing-ssh/securing-ssh.sh | ROOT_LOGIN=yes PASSWORD_LOGIN=yes X11_FORWARDING=yes sh
+curl https://raw.githubusercontent.com/c18s/LinuxScripts/master/securing-ssh/securing-ssh.sh | ROOT_LOGIN=no PASSWORD_LOGIN=no X11_FORWARDING=no sh
 ```
 
 ### Restore from backup
