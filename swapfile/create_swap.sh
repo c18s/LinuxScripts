@@ -36,7 +36,7 @@ if [ ! -e /proc/meminfo ]; then
   exit 1
 fi
 
-SWAP_EXISTS=$(swapExists)
+#SWAP_EXISTS=$(swapExists)
 if [ ! -z "$SWAP_EXISTS" ]; then
   echo 'Swap already exists'
   echo "$SWAP_EXISTS"
@@ -61,7 +61,7 @@ fi
 echo 'Enabling the swap file...'
 echo '3' >/proc/sys/vm/drop_caches 2>/dev/null
 swapoff -a
-SWAP_FILE=/swapfile
+SWAP_FILE=${SWAP_FILE:-/swapfile}
 rm -rf $SWAP_FILE
 fallocate -l "${SIZE}G" $SWAP_FILE
 chown root:root $SWAP_FILE
@@ -74,10 +74,10 @@ if [ ! -z "$SWAP_EXISTS" ]; then
   echo "$SWAP_EXISTS"
 fi
 
-sed -i '/swapfile/d' /etc/fstab
-grep -q 'swapfile' /etc/fstab
+sed -i "\|$SWAP_FILE|d" /etc/fstab
+grep -q "$SWAP_FILE" /etc/fstab
 if [ $? -ne 0 ]; then
-  echo '/swapfile none swap defaults 0 0' >>/etc/fstab
+  echo "$SWAP_FILE none swap defaults 0 0" >>/etc/fstab
 fi
 
 ## EOF

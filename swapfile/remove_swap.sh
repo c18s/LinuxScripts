@@ -31,7 +31,7 @@ fi
 echo 'Removing the swap file...'
 echo '3' >/proc/sys/vm/drop_caches 2>/dev/null
 swapoff -a
-SWAP_FILE=/swapfile
+SWAP_FILE=${SWAP_FILE:-/swapfile}
 rm -rf $SWAP_FILE
 
 SWAP_EXISTS=$(swapExists)
@@ -39,6 +39,6 @@ if [ ! -z "$SWAP_EXISTS" ]; then
   echo "$SWAP_EXISTS"
 fi
 
-sed -i '/swapfile/d' /etc/fstab
+sed -i "\|$SWAP_FILE|d" /etc/fstab
 
 ## EOF
