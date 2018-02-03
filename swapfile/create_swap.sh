@@ -9,7 +9,8 @@ parseInt() {
 }
 
 rootSizeAvailable() {
-  df -m / | grep '/' | awk '{print int($4/1024)}'
+  ROOT=${ROOT:-/}
+  df -m $ROOT | grep '/' | awk '{print int($4/1024)}'
 }
 
 swapExists() {
@@ -36,7 +37,7 @@ if [ ! -e /proc/meminfo ]; then
   exit 1
 fi
 
-#SWAP_EXISTS=$(swapExists)
+SWAP_EXISTS=$(swapExists)
 if [ ! -z "$SWAP_EXISTS" ]; then
   echo 'Swap already exists'
   echo "$SWAP_EXISTS"
@@ -63,7 +64,10 @@ echo '3' >/proc/sys/vm/drop_caches 2>/dev/null
 swapoff -a
 SWAP_FILE=${SWAP_FILE:-/swapfile}
 rm -rf $SWAP_FILE
-fallocate -l "${SIZE}G" $SWAP_FILE
+fallocate -l "${SIZE}G" $SWAP_FILE 2>/dev/null
+if [ $? -ne 0 ]; then
+  dd if=/dev/zero of=$SWAP_FILE bs=1M count=${SIZE}k
+fi
 chown root:root $SWAP_FILE
 chmod 600 $SWAP_FILE
 mkswap $SWAP_FILE
