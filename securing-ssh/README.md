@@ -39,19 +39,19 @@
 Default
 
 ```bash
-curl https://raw.githubusercontent.com/c18s/LinuxScripts/master/securing-ssh/securing-ssh.sh | sh
+curl -fsSL https://raw.githubusercontent.com/c18s/LinuxScripts/master/securing-ssh/securing-ssh.sh | sh
 ```
 
 Optional
 
 ```bash
-curl https://raw.githubusercontent.com/c18s/LinuxScripts/master/securing-ssh/securing-ssh.sh | ROOT_LOGIN=no PASSWORD_LOGIN=no X11_FORWARDING=no sh
+curl -fsSL https://raw.githubusercontent.com/c18s/LinuxScripts/master/securing-ssh/securing-ssh.sh | ROOT_LOGIN=no PASSWORD_LOGIN=no X11_FORWARDING=no sh
 ```
 
 ### Restore from backup
 
 ```bash
-curl https://raw.githubusercontent.com/c18s/LinuxScripts/master/securing-ssh/securing-ssh.sh | RESET=yes sh
+curl -fsSL https://raw.githubusercontent.com/c18s/LinuxScripts/master/securing-ssh/securing-ssh.sh | RESET=yes sh
 ```
 
 ## Reference

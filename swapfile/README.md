@@ -15,19 +15,19 @@
 Default swap size is 4G
 
 ```bash
-curl https://raw.githubusercontent.com/c18s/LinuxScripts/master/swapfile/create_swap.sh | sh
+curl -fsSL https://raw.githubusercontent.com/c18s/LinuxScripts/master/swapfile/create_swap.sh | sh
 ```
 
 Customize swap size (example: 2G)
 
 ```bash
-curl https://raw.githubusercontent.com/c18s/LinuxScripts/master/swapfile/create_swap.sh | SIZE=2 create_swap.sh
+curl -fsSL https://raw.githubusercontent.com/c18s/LinuxScripts/master/swapfile/create_swap.sh | SIZE=2 create_swap.sh
 ```
 
 ### Remove
 
 ```bash
-curl https://raw.githubusercontent.com/c18s/LinuxScripts/master/swapfile/remove_swap.sh | sh
+curl -fsSL https://raw.githubusercontent.com/c18s/LinuxScripts/master/swapfile/remove_swap.sh | sh
 ```
 
 ### Tuning virtual memory
@@ -38,7 +38,7 @@ curl https://raw.githubusercontent.com/c18s/LinuxScripts/master/swapfile/remove_
 > vm.dirty_background_ratio=5
 
 ```bash
-curl https://raw.githubusercontent.com/c18s/LinuxScripts/master/swapfile/sysctl_swap.sh | sh
+curl -fsSL https://raw.githubusercontent.com/c18s/LinuxScripts/master/swapfile/sysctl_swap.sh | sh
 ```
 
 ## Reference
