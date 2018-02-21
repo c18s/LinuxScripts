@@ -15,6 +15,7 @@ Collection of Linux scripts
 - [x] [swapfile](swapfile)
 - [x] [securing-ssh](securing-ssh)
 - [x] [sudo-privileges](sudo-privileges)
+- [x] [bash-it](bash-it)
 
 ## Todo
 
