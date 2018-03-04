@@ -22,8 +22,8 @@ EOL
 
 echo 5 >/proc/sys/vm/swappiness
 echo 50 >/proc/sys/vm/vfs_cache_pressure
-echo 10 >/proc/sys/vm//dirty_ratio
-echo 5 >/proc/sys/vm//dirty_background_ratio
+echo 10 >/proc/sys/vm/dirty_ratio
+echo 5 >/proc/sys/vm/dirty_background_ratio
 sysctl -p $SWAP_SYSCTL_FILE
 
 ## EOF
