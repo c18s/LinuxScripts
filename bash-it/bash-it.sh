@@ -1,10 +1,12 @@
 #!/bin/sh
+set -e
 
 if ! type git >/dev/null 2>&1; then
   echo 'git: command not found'
   exit 1
 fi
 
+cd ~/
 git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it
 ~/.bash_it/install.sh --silent
 
