@@ -1,5 +1,4 @@
 #!/bin/sh
-set -e
 
 if ! type git >/dev/null 2>&1; then
   echo 'git: command not found'
