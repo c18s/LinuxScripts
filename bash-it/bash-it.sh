@@ -10,8 +10,8 @@ git clone --depth=1 https://github.com/Bash-it/bash-it.git ~/.bash_it
 ~/.bash_it/install.sh --silent
 
 if [ "$(id -u)" -ne 0 ]; then
-  sed -i "s/^.*export BASH_IT_THEME=.*$/export BASH_IT_THEME='axin'/" ~/.bash_profile >/dev/null 2>&1
-  sed -i "s/^.*export BASH_IT_THEME=.*$/export BASH_IT_THEME='axin'/" ~/.bashrc >/dev/null 2>&1
+  sed -i "s/^.*export BASH_IT_THEME=.*$/export BASH_IT_THEME='dulcie'/" ~/.bash_profile >/dev/null 2>&1
+  sed -i "s/^.*export BASH_IT_THEME=.*$/export BASH_IT_THEME='dulcie'/" ~/.bashrc >/dev/null 2>&1
 else
   sed -i "s/^.*export BASH_IT_THEME=.*$/export BASH_IT_THEME='binaryanomaly'/" ~/.bash_profile >/dev/null 2>&1
   sed -i "s/^.*export BASH_IT_THEME=.*$/export BASH_IT_THEME='binaryanomaly'/" ~/.bashrc >/dev/null 2>&1
