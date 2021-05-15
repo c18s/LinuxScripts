@@ -56,7 +56,6 @@ fi
 
 if isYesOrNo "$PASSWORD_LOGIN"; then
   updateConfig 'PasswordAuthentication' "s/^.*PasswordAuthentication.*$/PasswordAuthentication $PASSWORD_LOGIN/"
-  updateConfig 'UsePAM' "s/^.*UsePAM.*$/UsePAM $PASSWORD_LOGIN/"
 fi
 
 if isYesOrNo "$X11_FORWARDING"; then
