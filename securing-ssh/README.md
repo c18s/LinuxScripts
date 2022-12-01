@@ -2,12 +2,13 @@
 
 ![Securing ssh](logo.png "Securing ssh Logo")
 
-----
+---
 
-[SSH][1] (Secure Shell) is an open source network protocol that is used to connect local or remote Linux servers to transfer files, make remote backups, remote command execution and other network related tasks via scp or sftp between two servers that connects on secure channel over the network.  
+[SSH][1] (Secure Shell) is an open source network protocol that is used to connect local or remote Linux servers to transfer files, make remote backups, remote command execution and other network related tasks via scp or sftp between two servers that connects on secure channel over the network.
+
 > However, a default installation of ssh isn't perfect, and when running an ssh server there are a few simple steps that can dramatically harden an installation.
 
-----
+---
 
 ## Usage
 
@@ -32,7 +33,6 @@
 |   ROOT_LOGIN   | yes/no |   Disable root login   |
 | PASSWORD_LOGIN | yes/no | Disable password login |
 | X11_FORWARDING | yes/no | Disable X11 Forwarding |
-
 
 ### Run script
 

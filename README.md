@@ -4,11 +4,11 @@
 
 Collection of Linux scripts
 
-----
+---
 
 [Shell scripts][1] are short programs that are written in a shell programming language and interpreted by a shell process. They are extremely useful for automating tasks on Linux and other Unix-like operating systems.
 
-----
+---
 
 ## Successful scripts
 

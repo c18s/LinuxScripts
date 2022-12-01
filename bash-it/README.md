@@ -2,12 +2,13 @@
 
 ![Bash-it](logo.png "Bash-it")
 
-----
+---
 
-[Bash-it][1] is a collection of community Bash commands and scripts for Bash 3.2+. 
+[Bash-it][1] is a collection of community Bash commands and scripts for Bash 3.2+.
+
 > Includes autocompletion, themes, aliases, custom functions, a few stolen pieces from Steve Losh, and more.
 
-----
+---
 
 ## Usage
 

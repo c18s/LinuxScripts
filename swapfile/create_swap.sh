@@ -44,10 +44,10 @@ if [ ! -z "$SWAP_EXISTS" ]; then
   exit 0
 fi
 
-SIZE=$(parseInt ${SIZE:-4})
+SIZE=$(parseInt ${SIZE:-2})
 if [ $SIZE -lt 1 ]; then
   echo "Usage: SIZE=[size] $0"
-  echo "Example(Swap size: 4G): SIZE=4 $0"
+  echo "Example(Swap size: 2G): SIZE=2 $0"
   exit 1
 fi
 
@@ -55,7 +55,7 @@ ROOT_SIZE=$(rootSizeAvailable)
 if [ $ROOT_SIZE -le $SIZE ]; then
   echo 'No space left on device: /'
   echo "Swap size require: ${SIZE}G"
-  echo "Root size abailable: ${ROOT_SIZE}G"
+  echo "Root size available: ${ROOT_SIZE}G"
   exit 1
 fi
 

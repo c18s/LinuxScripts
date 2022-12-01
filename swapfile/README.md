@@ -2,17 +2,17 @@
 
 ![Swap file](logo.png "Swap Logo")
 
-----
+---
 
-[Swap file][1] As an alternative to creating an entire partition, a swap file offers the ability to vary its size on-the-fly, and is more easily removed altogether. This may be especially desirable if disk space is at a premium (e.g. a modestly-sized SSD). 
+[Swap file][1] As an alternative to creating an entire partition, a swap file offers the ability to vary its size on-the-fly, and is more easily removed altogether. This may be especially desirable if disk space is at a premium (e.g. a modestly-sized SSD).
 
-----
+---
 
 ## Usage
 
 ### Create
 
-Default swap size is 4G
+Default swap size is 2G
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/c18s/LinuxScripts/master/swapfile/create_swap.sh | sh
@@ -21,7 +21,7 @@ curl -fsSL https://raw.githubusercontent.com/c18s/LinuxScripts/master/swapfile/c
 Customize swap size (example: 2G)
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/c18s/LinuxScripts/master/swapfile/create_swap.sh | SIZE=8 sh
+curl -fsSL https://raw.githubusercontent.com/c18s/LinuxScripts/master/swapfile/create_swap.sh | SIZE=2 sh
 ```
 
 ### Remove
