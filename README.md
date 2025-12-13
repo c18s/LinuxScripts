@@ -17,10 +17,6 @@ Collection of Linux scripts
 - [x] [sudo-privileges](sudo-privileges)
 - [x] [bash-it](bash-it)
 
-## Todo
-
-- [ ]
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
